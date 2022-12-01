@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+    <h1>Simple Chat Application</h1>
+    <p>Chat with all people from the world anonymously</p>
+</div>
+
+<div id="msg" class="container border border-secondary overflow-auto" style="height: 500px; max-height: 500px;">
+
+</div>
+&nbsp;
+<%= form_for @message, remote: true, html: {class:"container"} do |f| %>
+    <div class="form-group">
+    <%= f.text_field(:content, class: "form-control", placeholder: "Insert text here..") %>
+    </div>
+    <p>
+    <%= f.submit "Send", class: 'btn btn-outline-primary', id: 'btn_submit' %>
+<% end %>
